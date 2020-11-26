@@ -26,7 +26,7 @@ async fn main() {
             (h - 5) as _,
         )));
 
-        let mut image_data = image.get_image_data_mut();
+        let image_data = image.get_image_data_mut();
 
         if acc > 0.1 {
             for i in w + 1..(h - 1) * w - 1 {
@@ -39,7 +39,7 @@ async fn main() {
                     + prev_fire[i + w] as i32
                     + prev_fire[i + w + 1] as i32;
                 let mut avg = (sum / 8) as u8;
- 
+
                 if rand::gen_range(0, 5) == 0 && (avg > 0 || i >= (h - 4) * w) {
                     if avg >= 1 {
                         avg -= 1;

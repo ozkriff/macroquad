@@ -46,6 +46,8 @@ use std::pin::Pin;
 mod drawing;
 mod exec;
 
+pub mod experimental;
+
 pub mod camera;
 pub mod file;
 pub mod input;

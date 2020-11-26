@@ -178,6 +178,14 @@ impl Font {
 
         font.font_texture
     }
+
+    // TODO: implement & rename
+    pub fn get_xyz(&self) -> f32 {
+        let font = get_context().fonts_storage.get_font(*self);
+        // font.font.
+        // font.font
+        todo!()
+    }
 }
 
 /// Arguments for "draw_text_ex" function such as font, font_size etc
